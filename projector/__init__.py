@@ -1,1 +1,1 @@
-from .projector import *
+from . import projector

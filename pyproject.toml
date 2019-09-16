@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "projector"
+version = "0.0.1"
+description = "Automate your workday"
+authors = [
+    "Oleg Sokolov <sokolegg@yandex.ru>"
+]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/sokolegg/projector"
+keywords = ["automate", 'productivity']
+
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+# Requirements
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.scripts]
+projector = "projector.projector:main"

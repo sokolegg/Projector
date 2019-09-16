@@ -1,0 +1,17 @@
+# recursive PROJECTFILE because projector is also my project
+# you can see other projectfiles in examples
+
+run:
+  .
+  subl
+  pycharm
+  https://github.com/sokolegg/Projector
+  https://trello.com/b/A27c1UBB/projector
+close:
+  all
+metrics:
+  keyboard
+  codecount
+pomodoro:
+  30m
+
