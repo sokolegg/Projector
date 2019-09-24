@@ -12,7 +12,7 @@ import projector
 PROJECTOR_PATH = projector.__path__[0]
 print(PROJECTOR_PATH)
 PROJECTOR_TEMPLATES = PROJECTOR_PATH + '/templates/'
-PROJECTOR_DEFAULT_TEMPLATE = PROJECTOR_TEMPLATES + 'default'
+PROJECTOR_DEFAULT_TEMPLATE = PROJECTOR_TEMPLATES + 'default/'
 PROJECTOR_MAIN_LOGS = PROJECTOR_PATH + '/main.log' 
 ''' In project/projecor path active file stores'''
 PROJECTFILE_NAME = 'PROJECTFILE'
@@ -29,16 +29,17 @@ def build(template=None):
 	else PROJECTOR_TEMPLATES + template + '/'
 
 	# active path
-	project_path = os.getcwd()
-	projector_inside_full = project_path + '/' + PROJECTOR_INSIDE_PATH
+	project_path = os.getcwd()+ '/'
+	projector_inside_full = project_path + PROJECTOR_INSIDE_PATH
 	os.mkdir(projector_inside_full)
 
 	logging.basicConfig(filename=projector_inside_full + 'main.log', level=logging.INFO)
 	# Template files (PROJECTFILE or MAKEFILE or gitignore ...) to current project path
-	for template_file in template_path:
+	print('here')
+	for template_file in os.listdir(template_path):
 		template_orig = template_path + template_file
 		template_dst = project_path + template_file
-		if not os.path.exists(template_dst):
+		if os.path.exists(template_dst):
 			logging.info(TEMPLATE_FILE_EXISTS + template_dst)
 		else:
 			copyfile(template_orig, template_dst)
