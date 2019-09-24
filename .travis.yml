@@ -1,4 +1,4 @@
 language: python
 os: ubuntu
 install:
-  - python setup.py
+  - make test
