@@ -1,5 +1,6 @@
 pip=env/bin/python -m pip
-projector=../env/bin/projector
+python=env/bin/python3
+projector=env/bin/projector
 
 all: install
 
@@ -19,7 +20,11 @@ install: build
 	$(pip) install dist/projector*.whl
 
 test: install
-# 	cd tests && python test.py
-	rm -rf test_empty && mkdir test_empty && cd test_empty && $(projector) build
+	# script test
+	rm -rf test_empty && mkdir test_empty && cd test_empty && ../$(projector) build test_open_folder
+	cd test_empty && ../$(projector) run
+	# unittests doesn't work yet
+# 	cd tests && ../$(python) test.py
+
 
 .PHONY: all configure test lint build install

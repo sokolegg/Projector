@@ -1,0 +1,4 @@
+# test projectfile open only main folder (.)
+
+run:
+  - .
