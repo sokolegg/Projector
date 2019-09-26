@@ -1,2 +1,3 @@
 #!/bin/bash
-nautilus $0
+nautilus $1 &
+
