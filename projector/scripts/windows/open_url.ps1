@@ -12,8 +12,8 @@ param(
     [string]$HostAddress
 )
 try {
-start-process chrome.exe;
+start-process chrome.exe -ArgumentList $HostAddress;
 }
 catch {
-$HostAddress = $Null;
+throw "Host address is empty"
 }
