@@ -2,7 +2,7 @@
 .SYNOPSIS
 ./open_folder.ps1
 .DESCRIPTION
-Opens the folder you specified in Windows Explorer.
+Opens the folder you specified with Windows Explorer.
 .EXAMPLE
 ./open_folder.ps1 -FolderPath C:\Temp
 #>
