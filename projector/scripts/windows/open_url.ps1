@@ -1,10 +1,10 @@
 <#
 .SYNOPSIS
-./launchChrome.ps1
+./open_url.ps1
 .DESCRIPTION
 Starts Google Chrome browser with the link specified
 .EXAMPLE
-./launchChrome.ps1 -HostAddress 'https://google.com'
+./open_url.ps1 -HostAddress 'https://google.com'
 #>
 param(
     [CmdletBinding()]
