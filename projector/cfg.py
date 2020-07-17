@@ -15,7 +15,7 @@ PROJECTFILE_FOUND = "Found PROJECTFILE: "
 SCRIPT_BUILD = "Script build: "
 
 '''OS INFORMATION'''
-OS = 'ubuntu'
+OS = 'macos'
 OS_EXECUTOR = 'sh'
 
 ''' This files depend on project path '''

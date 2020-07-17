@@ -27,5 +27,6 @@ class TestProjector(unittest.TestCase):
 		print(result)
 		self.assertTrue(result > 0)
 
+
 if __name__ == '__main__':
-    unittest.main()
+	unittest.main()
