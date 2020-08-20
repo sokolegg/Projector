@@ -1,6 +1,6 @@
 # test projectfile open only main folder (.)
 
 run:
-  - https://google.com
+  - https://trello.com/b/A27c1UBB/projector
   - .
   - app zoom.us

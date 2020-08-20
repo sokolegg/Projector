@@ -10,7 +10,7 @@ PROJECTOR_MAIN_LOGS = PROJECTOR_PATH + '/main.log'
 ''' MESSAGES'''
 TEMPLATE_FILE_EXISTS = 'Template file is exists! Ignored: '
 COPY_MESSAGE = 'Making copy from template: '
-RUN_MESSAGE = 'Runing command: '
+RUN_MESSAGE = 'Running command: '
 PROJECTFILE_FOUND = "Found PROJECTFILE: "
 SCRIPT_BUILD = "Script build: "
 

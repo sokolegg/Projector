@@ -30,10 +30,28 @@ def run():
         run_process(to_run)
 
 
+def is_folder(to_run):
+    return to_run == '.'
+
+
+def is_url(to_run):
+    return to_run.startswith('http')
+
+
+def is_app(to_run):
+    return to_run.startswith('app ')
+
+
 def run_process(to_run):
-    if to_run == '.':
-        path = project.path
-        Script('open_folder').run(project, path)
+    if to_run.startswith(' '):
+        to_run = to_run[1:]
+    if is_folder(to_run):
+        Script('open_folder').run(project, to_run)
+    elif is_url(to_run):
+        Script('open_url').run(project, to_run)
+    elif is_app(to_run):
+        to_run = to_run[4:]
+        Script('open_app').run(project, to_run)
 
 
 def stop():
